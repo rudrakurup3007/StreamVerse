@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>StreamVerse – Browse</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="browse">
+    <header class="nav" id="nav"></header>
+    <main>
+      <section class="hero">
+        <span class="sh s1"></span><span class="sh s2"></span>
+        <h1>Your Next Favorite Story Starts Here.</h1>
+        <p>
+          Movies, series, news, sports, and kids' entertainment — all in one colorful
+          place.
+        </p>
+        <button class="btn co" id="go">Explore Categories</button>
+      </section>
+      <div id="ban"></div>
+      <div class="bar">
+        <div
+          class="chips"
+          id="chips"
+          role="group"
+          aria-label="Categories"
+          style="flex: 1"
+        ></div>
+        <input
+          id="q"
+          type="search"
+          placeholder="Search titles…"
+          aria-label="Search titles"
+        />
+      </div>
+      <div class="grid" id="grid"></div>
+    </main>
+    <script src="js/app.js"></script>
+  </body>
+</html>
