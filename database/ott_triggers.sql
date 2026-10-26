@@ -70,7 +70,7 @@ CREATE TRIGGER Auto_Mark_Completed_Insert
 BEFORE INSERT ON Watch_History
 FOR EACH ROW
 BEGIN
-    SET NEW.Completed = (NEW.Progress = 100);
+    SET NEW.Completed = CASE WHEN NEW.Progress = 100 THEN 1 ELSE 0 END;
 END //
 
 DROP TRIGGER IF EXISTS Auto_Mark_Completed_Update //
@@ -78,7 +78,7 @@ CREATE TRIGGER Auto_Mark_Completed_Update
 BEFORE UPDATE ON Watch_History
 FOR EACH ROW
 BEGIN
-    SET NEW.Completed = (NEW.Progress = 100);
+    SET NEW.Completed = CASE WHEN NEW.Progress = 100 THEN 1 ELSE 0 END;
 END //
 
 -- Only one Admin account
